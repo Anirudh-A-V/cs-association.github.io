@@ -1,7 +1,15 @@
+:root{
+  --footer:#6906B7;
+  --slider:#000;
+  --trans:transparent;
+}
+
 .poster-container {
   width: 100%;
   margin: auto;
-  background-color: #000;
+  box-shadow: 0 4px 1rem -4px #000;
+  margin-top: 35px;
+  /* background-color: var(--trans); */
   align-items: center;
   overflow: hidden;
 }
@@ -14,10 +22,10 @@
   display: flex;
   align-items: center;
   justify-items: center;
-  color: rgb(0, 0, 0);
-  background: rgb(0, 0, 0);
+  /* color: var(--trans); */
+  /* background: var(--trans); */
   padding: 2rem;
-  box-shadow: 0 0 1rem #000 inset;
+  /* box-shadow: 0 0 1rem #000 inset; */
   overflow-x: auto;
   position: relative;
   overflow: auto;
@@ -33,8 +41,8 @@
   align-items: center;
   justify-content:center;
   flex: 1 0 250px;
-  box-shadow: 0 1px 1rem -4px #000;
-  background: rgb(0, 0, 0);
+  /* box-shadow: 0 1px 1rem -4px #000; */
+  background: var(--trans);
   margin: 0.5rem;
   margin-top: 35px;
   margin-bottom:35px;
@@ -51,7 +59,7 @@
 }
 
 .poster-card:hover {
-  box-shadow: 0 4px 1rem -4px #000;
+  box-shadow: 0 4px 1rem -4px transparent;
   transform: translateY(-3px);
 }
 
@@ -72,7 +80,7 @@
 
 .arrow-container {
   width: 100%;
-  background-color: #000;
+  /* background-color: var(--trans); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,6 +115,7 @@
 
 @media screen and (max-width: 525px) {
   .poster-container {
+    margin-top: 50px;
     width: 100%;
     padding-top: 50px;
   }

@@ -51,7 +51,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: 200px auto auto auto !important;
+  margin: 104px auto auto auto !important;
   flex-wrap: wrap;
 
   padding: 100px 40px 40px 40px;
@@ -93,12 +93,13 @@
   .header span {
     width: 40px;
     font-size: 8px;
-    top: 66px;
+    top: 74px;
   }
 
   .cards {
     padding-top: 20px;
     margin-top: 100px;
+    margin: 84px auto auto auto !important;
   }
 
   .cards > span {

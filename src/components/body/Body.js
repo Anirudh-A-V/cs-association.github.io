@@ -7,6 +7,7 @@ import axios from "axios";
 import litmus from "../../images/litmus.svg";
 import entri from "../../images/entri.svg";
 import edgradi from "../../images/edgradi.svg";
+import SimpleSlider from "../slider/Slider";
 
 const Body = () => {
   const [data, setData] = useState({ score: [] });
@@ -69,8 +70,8 @@ const Body = () => {
         </div>
         <img src={cs} className="img img-cs" alt="" />
       </div>
-
       {/* =========== CARDS =========== */}
+      <SimpleSlider />
       <div className="cards">
         <span className="games-title">GAMES</span>
         {data.score.map((item) => {
