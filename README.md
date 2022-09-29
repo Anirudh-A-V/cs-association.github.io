@@ -5,7 +5,7 @@
 This is a score tracker webapp using ReactJS, and NodeJS backend.\
 The tracker is capable of adding scores of the listed games using an API. \
 Link for adding scores is given in the description of the repo.\
-The scores can be viewed by anyone real-time. MongoDB is used as the database for this project.\
+The scores can be viewed by anyone real-time. MongoDB is used as the database for this project.
 
 ## After Forking the project 
 
