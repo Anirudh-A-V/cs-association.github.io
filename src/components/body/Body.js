@@ -8,8 +8,10 @@ import litmus from "../../images/litmus.svg";
 import entri from "../../images/entri.svg";
 import edgradi from "../../images/edgradi.svg";
 import SimpleSlider from "../slider/Slider";
+import Modal from "../Modal/Modal";
 
 const Body = () => {
+  const [selectedImg, setSelectedImg] = useState(null);
   const [data, setData] = useState({ score: [] });
   const loadRef = useRef();
 
@@ -71,14 +73,15 @@ const Body = () => {
         <img src={cs} className="img img-cs" alt="" />
       </div>
       {/* =========== CARDS =========== */}
-      <SimpleSlider />
       <div className="cards">
         <span className="games-title">GAMES</span>
         {data.score.map((item) => {
           console.log(item);
-          return <Card item={item} />;
+          return <Card setSelectedImg={setSelectedImg} item={item} />;
         })}
       </div>
+        <SimpleSlider />
+        { selectedImg && <Modal setSelectedImg={setSelectedImg} selectedImg={selectedImg}/>}
     </div>
   );
 };

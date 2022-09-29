@@ -88,7 +88,7 @@ const Card = (props) => {
     <div className="card">
       <div className="card-details">
         <div className="top">
-          <img src={img} alt="" />
+          <img src={img} alt="" onClick={() => props.setSelectedImg(img)} />
         </div>
         <div className="bottom">
           <div className="title">{game}</div>
