@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cs-association.github.io/static/css/main.9af1863c.css",
-    "main.js": "/cs-association.github.io/static/js/main.54a19fa3.js",
+    "main.js": "/cs-association.github.io/static/js/main.eb1ec076.js",
     "static/media/bg.svg": "/cs-association.github.io/static/media/bg.c3fe16fa97e1e065abcfa4e54e94a66d.svg",
     "static/media/lazer_tag.png": "/cs-association.github.io/static/media/lazer_tag.0de0f9e4f3bc6e45c3e5.png",
     "static/media/gaming_arcade.jpg": "/cs-association.github.io/static/media/gaming_arcade.c88807357cf1d91a2598.jpg",
@@ -43,10 +43,10 @@
     "static/media/Facebook.svg": "/cs-association.github.io/static/media/Facebook.b723e53d282508a42bec7af7c6f44834.svg",
     "static/media/arrow_right.svg": "/cs-association.github.io/static/media/arrow_right.8531760f1bd671250b8cc79f5281f5c1.svg",
     "main.9af1863c.css.map": "/cs-association.github.io/static/css/main.9af1863c.css.map",
-    "main.54a19fa3.js.map": "/cs-association.github.io/static/js/main.54a19fa3.js.map"
+    "main.eb1ec076.js.map": "/cs-association.github.io/static/js/main.eb1ec076.js.map"
   },
   "entrypoints": [
     "static/css/main.9af1863c.css",
-    "static/js/main.54a19fa3.js"
+    "static/js/main.eb1ec076.js"
   ]
 }
