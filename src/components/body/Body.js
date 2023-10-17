@@ -15,38 +15,40 @@ const Body = () => {
   const [data, setData] = useState({ score: [] });
   const loadRef = useRef();
 
-  const startloading = () => {
-    loadRef.current.style.visibility = "visible";
-    loadRef.current.style.opacity = 1;
-  };
+  // const startloading = () => {
+  //   loadRef.current.style.visibility = "visible";
+  //   loadRef.current.style.opacity = 1;
+  // };
 
-  const endloading = () => {
-    loadRef.current.style.opacity = 0;
-    loadRef.current.style.visibility = "hidden";
-  };
+  // const endloading = () => {
+  //   loadRef.current.style.opacity = 0;
+  //   loadRef.current.style.visibility = "hidden";
+  // };
 
-  useEffect(() => {
-    const getdata = async () => {
-      try {
-        startloading();
-        const res = await axios.get(
-          `${process.env.REACT_APP_API_URI}/scoreboard`
-        );
-        setData({ ...res.data });
-        setTimeout(() => {
-          endloading();
-        }, 1000);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    getdata();
-  }, []);
+  // useEffect(() => {
+  //   const getdata = async () => {
+  //     try {
+  //       startloading();
+  //       const res = await axios.get(
+  //         `${process.env.REACT_APP_API_URI}/scoreboard`
+  //       );
+  //       setData({ ...res.data });
+  //       setTimeout(() => {
+  //         endloading();
+  //       }, 1000);
+  //     } catch (err) {
+  //       console.log(err);
+  //     }
+  //   };
+  //   getdata();
+  // }, []);
 
   return (
     <div className="body">
       {/* =========== LOADING =========== */}
-      <div className="loading" ref={loadRef}>
+      <div className="loading" ref={loadRef} style={{
+        display: "hidden",
+      }}>
         <div class="multi-spinner-container">
           <div class="multi-spinner">
             <div class="multi-spinner">
@@ -75,10 +77,12 @@ const Body = () => {
       {/* =========== CARDS =========== */}
       <div className="cards">
         <span className="games-title">GAMES</span>
-        {data.score.map((item) => {
+        {data.score.length !== 0 ? data.score.map((item) => {
           console.log(item);
           return <Card setSelectedImg={setSelectedImg} item={item} />;
-        })}
+        }) : (
+          <p className="disconnected">NO DATA - DISCONNECTED FROM BACKEND</p>
+        )}
       </div>
         <SimpleSlider />
         { selectedImg && <Modal setSelectedImg={setSelectedImg} selectedImg={selectedImg}/>}
